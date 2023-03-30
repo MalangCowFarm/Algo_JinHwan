@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03b24585-1fec-47ed-a843-80039eb84739" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/24444/sol.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/24445/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/24445/sol.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -161,5 +158,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
