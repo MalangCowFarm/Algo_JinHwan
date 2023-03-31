@@ -5,7 +5,7 @@ perm = list(input())
 li = ['' for _ in range(len(perm))]
 perms = [[] for _ in range(len(perm))]
 k = []
-# print(perm)
+
 for i in range(len(perm)):
     perms[i].append(perm[i])
 
@@ -20,6 +20,12 @@ for j in range(len(perm)):
         li[j] = (perms[j][0] + perms[j+1][0])
         end = perms[j][0] + perms[j+1][0]
         j = j + 2
+    elif end == (perms[j][0] + perms[j+1][0]):
+        li[j] = (perms[j][0] + perms[j+1][0] + perms[j+2][0])
+        end = perms[j][0] + perms[j+1][0] + perms[j+2][0]
+        j = j + 3
+
+
 k.append(li[0][0])
 for j in range(len(li)-1):
     if len(li[j]) == 1:
