@@ -1,41 +1,34 @@
 import sys
 sys.stdin = open("input.txt")
+from collections import deque
 
-dx = [1, 1, -1, -1, 2, 2, -2, -2]
-dy = [2, -2, 2, -2, 1, -1, 1, -1]
-def knight(i, j):
-    global result, cnt
-    i, j = sx, sy
-    for k in range(8):
-        nx = i + dx[k]
-        ny = j + dy[k]
-        if 0 <= nx < I and 0 <= ny < I:
-            i, j = nx, ny
-            if lx == sx and sy == ly:
-                cnt = 0
-            if arr[nx][ny] != 1:
-                if arr[nx][ny] == 2:
-                    return result
-                else:
-                    arr[i][j] = 1
-                    cnt += 1
-                    result = cnt
-                    if result < cnt:
-                        continue
+def knight():
+    
+    dx = [1, 1, -1, -1, 2, 2, -2, -2]
+    dy = [2, -2, 2, -2, 1, -1, 1, -1]
+    # 시작점
+    q = deque([[sx,sy]])
+    while q:
+        x,y = q.popleft()
+        # 이동하려는 칸 도착시 현재칸 까지 이동횟수 리턴
+        if x == lx and y == ly:
+            return graph[x][y]
+        # 나이트 이동 방향 탐색
+        for k in range(8):
+            nx = x + dx[k]
+            ny = y + dy[k]
+            # 범위 내 있고 탐색 X 탐색
+            if 0 <= nx < I and 0 <= ny < I:
+                if not graph[nx][ny]:
+                    q.append([nx, ny])
+                    graph[nx][ny] = graph[x][y] + 1 # 이동횟수 초기화
+
 
 T = int(input())
 for tc in range(1, T+1):
     I = int(input())
-    arr = [[0 for _ in range(I)] for _ in range(I)]
+    graph = [[0 for _ in range(I)] for _ in range(I)]
     sx, sy = map(int, input().split())
     lx, ly = map(int, input().split())
-    result = 0
-    cnt = 0
-    knight(sx, sy)
-    arr[sx][sy] = 1
-    arr[lx][ly] = 2
-    print(cnt)
-
-    for x in arr:
-        print(x)
-    print()
+    print(knight())
+    print(graph)
