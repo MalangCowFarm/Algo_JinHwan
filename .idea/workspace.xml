@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03b24585-1fec-47ed-a843-80039eb84739" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week 9/7562/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/week 9/7562/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week 9/7562/sol.py" beforeDir="false" afterPath="$PROJECT_DIR$/week 9/7562/sol.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +29,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager" selected="Python.sol (1)">
+  <component name="RunManager" selected="Python.sol">
     <configuration name="sol (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Algo_JinHwan" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -139,8 +137,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.sol (1)" />
         <item itemvalue="Python.sol" />
+        <item itemvalue="Python.sol (1)" />
         <item itemvalue="Python.sol (5)" />
         <item itemvalue="Python.sol (4)" />
         <item itemvalue="Python.sol (2)" />
