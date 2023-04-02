@@ -13,6 +13,8 @@ def dfs():
         for j in st:
             if stan + arr[j-1] - K < 500:
                 result = False
+                if result == False:
+                    continue
             stan = stan + arr[j-1] - K
         if result == True:
             cnt += 1

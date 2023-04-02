@@ -3,7 +3,7 @@ sys.stdin = open("input.txt")
 from collections import deque
 
 def knight():
-    
+    global cnt
     dx = [1, 1, -1, -1, 2, 2, -2, -2]
     dy = [2, -2, 2, -2, 1, -1, 1, -1]
     # 시작점
@@ -12,6 +12,8 @@ def knight():
         x,y = q.popleft()
         # 이동하려는 칸 도착시 현재칸 까지 이동횟수 리턴
         if x == lx and y == ly:
+            cnt = graph[x][y]
+
             return graph[x][y]
         # 나이트 이동 방향 탐색
         for k in range(8):
@@ -30,5 +32,7 @@ for tc in range(1, T+1):
     graph = [[0 for _ in range(I)] for _ in range(I)]
     sx, sy = map(int, input().split())
     lx, ly = map(int, input().split())
-    print(knight())
-    print(graph)
+    cnt = 0
+    knight()
+    print(cnt)
+    # print(graph)

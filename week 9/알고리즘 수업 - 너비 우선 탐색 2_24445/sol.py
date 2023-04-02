@@ -11,14 +11,16 @@ for _ in range(M):
     u, v = map(int, input().split())
     node[u].append(v)
     node[v].append(u)
-
+# print(node)
 
 def bfs(start):
     global i
     queue.append(start)
     while queue:
         now = queue.popleft()
+        # print(now)
         answer[now - 1] = i
+        # print(answer)
         i += 1
         for j in node[now]:
             if visited[j] == False:

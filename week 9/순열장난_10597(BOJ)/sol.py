@@ -1,6 +1,5 @@
 import sys
 sys.stdin = open("input.txt")
-
 perm = list(input())
 li = ['' for _ in range(len(perm))]
 perms = [[] for _ in range(len(perm))]
@@ -34,8 +33,10 @@ for j in range(len(li)-1):
                 k.append(li[j+1])
 
 
-
+# testcase만 맞았습니다....
 print(*k)
+
+
 
 
 
