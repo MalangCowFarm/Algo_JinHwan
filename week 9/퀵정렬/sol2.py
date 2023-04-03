@@ -15,7 +15,7 @@ def quick_sort(arr):
                 left.append(arr[i])
         return [*quick_sort(left), pivot, *quick_sort(right)]
 
-
+##
 T = int(input())
 for tc in range(1, T+1):
     arrs = []
