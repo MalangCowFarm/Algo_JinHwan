@@ -2,50 +2,33 @@ import sys
 sys.stdin = open("input.txt")
 
 
-
-
-def dfs(a):
-    global result
-    result.append(a)
-    if len(result) == M+1:
-        print(*result)
-        return
-
-    for i in range(len(ar[a])):
-        if ar[a][i] not in result:
-            if visited[ar[a][i]] != 1:
-                visited[ar[a][i]] = 1
-                dfs(ar[a][i])
-
-# def bfs(a):
-#     global result
-#     result.append(a)
-#     if len(result) == M+1:
-#         print(*result)
-#         return
-#     for i in range(len(ar[a])):
-#         result.append(ar[a][i])
-#         if ar[a][i] not in result:
-#             if visited
-
-
-
-
-
-
 N, M, V = map(int, input().split())
-arr = [[] for _ in range(N+1)]
-result = []
+arr = [[0] * (N+1) for _ in range(N+1)]
+visited = [0] * (N+1)
 for _ in range(M):
     v1, v2 = map(int, input().split())
-    arr[v1].append(v2)
-    arr[v2].append(v1)
+    arr[v1][v2] = arr[v2][v1] = 1
 
-ar = [[] for _ in range(N+1)]
-for i in range(len(arr)):
-    arr[i] = sorted(arr[i])
-    ar[i] = arr[i]
-visited = [0 for _ in range(N+1)]
-visited[V] = 1
+def dfs(V):
+    visited[V] = 1
+    print(V, end = ' ')
+    for i in range(1, N+1):
+        if visited[i] == 0 and arr[V][i] == 1:
+            dfs(i)
+
+def bfs(V):
+    queue = [V]
+    visited[V] = 0
+    while queue:
+        V = queue.pop(0)
+        print(V, end = ' ')
+        for i in range(1, N+1):
+            if visited[i] == 1 and arr[V][i] == 1:
+                queue.append(i)
+                visited[i] = 0
+
+
 
 dfs(V)
+print()
+bfs(V)
