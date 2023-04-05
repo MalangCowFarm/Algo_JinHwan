@@ -16,7 +16,7 @@ def bfs(x, y):
             if 0 <= nx < h and 0 <= ny < w and arr[nx][ny] == 1:
                 arr[nx][ny] = 0
                 q.append([nx, ny])
-
+            print(arr)
 
 while True:
     k = 0
