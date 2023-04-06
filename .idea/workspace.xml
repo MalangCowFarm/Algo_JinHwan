@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03b24585-1fec-47ed-a843-80039eb84739" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/week 10/섬의 개수_4963(BOJ)/solve.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/week 10/촌수계산_2644(BOJ)/solve.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week 10/15723/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/week 10/15723/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week 10/15723/sol.py" beforeDir="false" afterPath="$PROJECT_DIR$/week 10/15723/sol.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/week 10/DFS와 BFS_1260(BOJ)/sol.py" beforeDir="false" afterPath="$PROJECT_DIR$/week 10/DFS와 BFS_1260(BOJ)/sol.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/week 10/섬의 개수_4963(BOJ)/sol.py" beforeDir="false" afterPath="$PROJECT_DIR$/week 10/섬의 개수_4963(BOJ)/sol.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +35,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
   </component>
-  <component name="RunManager" selected="Python.sol (4)">
+  <component name="RunManager" selected="Python.sol (3)">
     <configuration name="sol (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Algo_JinHwan" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -52,7 +57,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="sol (3)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="sol (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Algo_JinHwan" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -73,7 +78,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="sol (4)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="sol (3)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Algo_JinHwan" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -94,7 +99,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="sol" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="solve (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Algo_JinHwan" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -102,11 +107,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/week 10/DFS와 BFS_1260(BOJ)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/week 10/섬의 개수_4963(BOJ)" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week 10/DFS와 BFS_1260(BOJ)/sol.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week 10/섬의 개수_4963(BOJ)/solve.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -123,11 +128,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/week 10/1260" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/week 10/촌수계산_2644(BOJ)" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week 10/1260/solve.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/week 10/촌수계산_2644(BOJ)/solve.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -138,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.sol (4)" />
-        <item itemvalue="Python.sol (1)" />
         <item itemvalue="Python.sol (3)" />
-        <item itemvalue="Python.sol" />
+        <item itemvalue="Python.sol (1)" />
+        <item itemvalue="Python.solve (2)" />
         <item itemvalue="Python.solve" />
+        <item itemvalue="Python.sol (2)" />
       </list>
     </recent_temporary>
   </component>

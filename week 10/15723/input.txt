@@ -1,6 +1,6 @@
 3
-a is b
-b is c
+a is e
+b is e
 c is d
 3
 a is d
