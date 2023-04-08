@@ -21,9 +21,9 @@ for _ in range(T):
             sar[_][1] = i
 
     N = max(sar[_])
-p = [[] for _ in range(N+1)]
-k = [[] for _ in range(N+1)]
-for i in range(N+1):
+p = [[] for _ in range(26)]
+k = [[] for _ in range(26)]
+for i in range(26):
     k[i].append(i)
     p[i].append(i)
 visited = [0] * (N+1)
@@ -55,26 +55,26 @@ for i in range(len(k)):
             q[i].append(p[j])
     q[i].append(p[-1])
 
-#
-# o = int(input())
-# tar = [[] for _ in range(o)]
-#
-# for _ in range(o):
-#     urr = list(input().split())
-#     tar[_].append(urr[0])
-#     tar[_].append(urr[2])
-#
-#     for i in range(len(urr)+1):
-#         if tar[_][0] == kar[i]:
-#             tar[_][0] = i
-#         if kar[i] == tar[_][1]:
-#             tar[_][1] = i
-#
-# for i in range(len(tar)):
-#     if tar[i][1] in q[i]:
-#         print('T')
-#     else:
-#         print('F')
+
+o = int(input())
+tar = [[] for _ in range(o)]
+
+for _ in range(o):
+    urr = list(input().split())
+    tar[_].append(urr[0])
+    tar[_].append(urr[2])
+
+    for i in range(len(urr)+1):
+        if tar[_][0] == kar[i]:
+            tar[_][0] = i
+        if kar[i] == tar[_][1]:
+            tar[_][1] = i
+
+for i in range(len(tar)):
+    if tar[i][1] in q[i]:
+        print('T')
+    else:
+        print('F')
 #
 # #
 # #
