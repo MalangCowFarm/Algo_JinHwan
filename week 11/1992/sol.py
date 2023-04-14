@@ -8,16 +8,26 @@ sys.stdin = open("input.txt")
 #         for i in range(N):
 #             for j in range(N):
 #                 arr
-#
-dx = [0, 1, 0]
-
-
-
 N = int(input())
 arr = [list(map(int, input())) for _ in range(N)]
-result = []
 
-if '0' not in arr:
-    print(1)
-elif '1' not in arr:
-    print(0)
+#
+def dfs(x, y, N):
+    for i in range(x, x+N):
+        for j in range(y, y+N):
+            if arr[x][y] != arr[i][j]:
+                print('(', end = "")
+                dfs(x, y, N//2)
+                dfs(x,y+ N//2,N//2)
+                dfs(x+N//2, y, N//2)
+                dfs(x+N//2, y+N//2, N//2)
+                print(')', end = "")
+                return
+
+    if arr[x][y] == 1:
+        print(1, end = '')
+    else:
+        print(0, end = '')
+
+
+dfs(0, 0, N)
