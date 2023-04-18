@@ -1,45 +1,29 @@
 import sys
 sys.stdin = open("input.txt")
-result = 1e9
+result = []
 N, M = map(int, input().split())
 arr = [list(input()) for _ in range(N)]
 for i in range(N-8+1):
     for j in range(M-8+1):
         cnt = 0
         cnt1 = 0
-        for k in range(8):
-            for l in range(8):
-                if k % 2 == 0:
-                    if l % 2 == 0:
-                        if arr[i+k][j+l] == 'B':
-                            cnt += 1
-                        elif arr[i+k][j+l] == 'W':
-                            cnt1 += 1
-                    else:
-                        if arr[i+k][j+l] == 'W':
-                            cnt1 += 1
-                        elif arr[i + k][j + l] == 'B':
-                            cnt += 1
-                elif k % 2 == 1:
-                    if l % 2 == 0:
-                        if arr[i+k][j+l] == 'W':
-                            cnt1 += 1
-                        elif arr[i+k][j+l] == 'B':
-                            cnt += 1
-                    else:
-                        if arr[i+k][j+l] == 'B':
-                            cnt += 1
-                        elif arr[i+k][j+l] == 'W':
-                            cnt1 += 1
+        for k in range(i, i+8):
+            for l in range(j, j+8):
+                if (l+k) % 2 == 0:
+                    if arr[k][l] != 'B':
+                        cnt += 1
+                    if arr[k][l] != 'W':
+                        cnt1 += 1
+                else:
+                    if arr[k][l] != 'W':
+                        cnt += 1
+                    if arr[k][l] != 'B':
+                        cnt1 += 1
 
-        print(cnt, cnt1)
-        if result > 64-(cnt+cnt1):
-            result = 64-(cnt+cnt1)
+        result.append(cnt)
+        result.append(cnt1)
 
-print(result)
-    #
-
-
+print(min(result))
 
 
 
