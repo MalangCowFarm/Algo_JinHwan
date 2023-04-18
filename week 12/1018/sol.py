@@ -1,60 +1,47 @@
 import sys
 sys.stdin = open("input.txt")
-
-
-dx = [0, 2, 4, 6]
-dy = [1, 3, 5, 7]
-def dfs(x, y):
-    cnt = 0
-    global bres, wres, result
-    for k in range(i, i+8):
-        wcnt = 0
-        bcnt = 0
-        for o in range(4):
-            nx = j + dx[o]
-            ny = j + dy[o]
-            if 0 <= nx < M and 0 <= ny < M:
-
-                if arr[k][nx] != arr[k][y]:
-                    bcnt += 1
-                if arr[k][ny] != arr[k][y+1]:
-                    wcnt += 1
-
-        if arr[k][nx] != arr[k][ny]:
-            cnt += wcnt
-            cnt += bcnt
-#
-        # print(cnt)
-    #
-    # print(cnt)
-        if cnt > result:
-            result = cnt
-    # print(result)
-
-
-
-
-
-
-
-
+result = 1e9
 N, M = map(int, input().split())
 arr = [list(input()) for _ in range(N)]
-result = 0
-arrk = [[0] for _ in range(8) for _ in range(8)]
-bres = 0
-wres = 0
-for i in range(N - 8 + 1):
-    for j in range(M - 8 + 1):
-        dfs(i, j)
+for i in range(N-8+1):
+    for j in range(M-8+1):
+        cnt = 0
+        cnt1 = 0
+        for k in range(8):
+            for l in range(8):
+                if k % 2 == 0:
+                    if l % 2 == 0:
+                        if arr[i+k][j+l] == 'B':
+                            cnt += 1
+                        elif arr[i+k][j+l] == 'W':
+                            cnt1 += 1
+                    else:
+                        if arr[i+k][j+l] == 'W':
+                            cnt1 += 1
+                        elif arr[i + k][j + l] == 'B':
+                            cnt += 1
+                elif k % 2 == 1:
+                    if l % 2 == 0:
+                        if arr[i+k][j+l] == 'W':
+                            cnt1 += 1
+                        elif arr[i+k][j+l] == 'B':
+                            cnt += 1
+                    else:
+                        if arr[i+k][j+l] == 'B':
+                            cnt += 1
+                        elif arr[i+k][j+l] == 'W':
+                            cnt1 += 1
 
+        print(cnt, cnt1)
+        if result > 64-(cnt+cnt1):
+            result = 64-(cnt+cnt1)
 
-
-
-
-# if result == 0:
-#     result = 0
 print(result)
+    #
+
+
+
+
 
 
 
