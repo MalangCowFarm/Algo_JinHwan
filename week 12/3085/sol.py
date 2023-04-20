@@ -4,12 +4,45 @@ sys.stdin = open("input.txt")
 def check(arr):
     answer = 1
     for i in range(N):
+        cnt = 1
         for j in range(1, N):
+            if arr[i][j] == arr[i][j-1]:
+                cnt += 1
+            else:
+                cnt = 1
+            if answer < cnt:
+                answer = cnt
+        cnt = 1
+        for j in range(1, N):
+            if arr[j][i] == arr[j-1][i]:
+                cnt += 1
+            else:
+                cnt = 1
+            if answer < cnt:
+                answer = cnt
+    return answer
 
 N = int(input())
 arr = [list(input()) for _ in range(N)]
+answer = 0
+check(arr)
 
+for i in range(N):
+    for j in range(N):
+        if j + 1 < N:
+            arr[i][j], arr[i][j + 1] = arr[i][j + 1], arr[i][j]
+            temp = check(arr)
+            if temp > answer:
+                answer = temp
+            arr[i][j], arr[i][j + 1] = arr[i][j + 1], arr[i][j]
+        if i + 1 < N:
+            arr[i][j], arr[i + 1][j] = arr[i + 1][j], arr[i][j]
+            temp = check(arr)
+            if temp > answer:
+                answer = temp
+            arr[i][j], arr[i + 1][j] = arr[i + 1][j], arr[i][j]
 
+print(answer)
 
 
 
