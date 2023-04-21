@@ -1,74 +1,26 @@
 import sys
 sys.stdin = open("input.txt")
 
-N, M = map(int, input().split())
-arr = list(map(int, input().split()))
-
-s = 0
-e = 0
-res = 1e19
-result = arr[0]
-cnt = 2
+n, m = map(int, input().split())
+lst = list(map(int,input().split()))
 
 
-while True:
-    if result < M and e != N-1:
-        e += 1
-        result += arr[e]
-        cnt += 1
-    elif result >= M:
-        result -= arr[s]
-        s += 1
-        cnt -= 1
-        if res > cnt:
-            res = cnt
+ans = n+1
+sm = 0
+end = 0
 
-    if e == N-1 and result < M:
-        break
+# start 증가시키며 반복
+for start in range(n):
+    while sm<m and end<n:
+        sm += lst[end]
+        end += 1
+    # 부분합이 m일때 cnt+=1
+    if sm >= m:
+        if len(lst[start:end]) < ans:
+            ans = len(lst[start:end])
+        sm -= lst[start]
 
-
-
-if res == 1e19:
+if ans == n+1:
     print(0)
 else:
-    print(res)
-
-#_____________________________________________________________________________
-# 틀린 식
-N, M = map(int, input().split())
-arr = list(map(int, input().split()))
-
-s = 0
-e = 0
-res = 1e19
-result = arr[0]
-cnt = 2
-
-
-
-if sum(arr) == M:
-    res = N
-    for i in arr:
-        if i >= M:
-            res = 1
-else:
-    while s < N-1 and e < N-1:
-        if result < M:
-            e += 1
-            result += arr[e]
-            cnt += 1
-        elif result >= M:
-            result -= arr[s]
-            s += 1
-            cnt -= 1
-            if res > cnt:
-                res = cnt
-
-
-
-
-if res == 1e19:
-    print(0)
-else:
-    print(res)
-
+    print(ans)
