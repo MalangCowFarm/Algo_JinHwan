@@ -1,7 +1,7 @@
 import sys
 # sys.stdin = open("input.txt")
 input = sys.stdin.readline
-import  heapq
+import heapq
 N = int(input())
 l = []
 
